@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+<servlet>
+    <servlet-name>AccueilServlet</servlet-name>
+    <servlet-class>fr.cda.AccueilServlet</servlet-class>
+</servlet>
+   <servlet-mapping>
+       <servlet-name>AccueilServlet</servlet-name>
+       <url-pattern>/accueil</url-pattern>
+   </servlet-mapping>
+    <servlet>
+        <servlet-name>AproposVue</servlet-name>
+        <jsp-file>/WEB-INF/apropos.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AproposVue</servlet-name>
+        <url-pattern>/apropos</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ContactVue</servlet-name>
+        <jsp-file>/WEB-INF/contact.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactVue</servlet-name>
+        <url-pattern>/contact</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LesmaisonsVue</servlet-name>
+        <jsp-file>/WEB-INF/lesmaisons.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LesmaisonsVue</servlet-name>
+        <url-pattern>/lesmaisons</url-pattern>
+    </servlet-mapping>
+</web-app>
