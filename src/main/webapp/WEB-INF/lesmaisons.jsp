@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row text-center">
             <div class="col pt-5">
-                <h1>Simply A House: Toutes les Maisons</h1>
+                <h2 class="pb-3">Simply A House: Toutes les Maisons</h2>
                 <p>Que votre choix se porte sur une <span class="fw-bold">maison traditionnelle</span> ou sur une <span class="fw-bold">maison contemporaine</span>, notre équipe expérimentée, composée d’un responsable qualité et de technico-commerciaux, est là pour vous accompagner dans votre projet.</p>
             </div>
         </div>
@@ -57,24 +57,24 @@
     <div class="container">
         <div class="row text-center">
             <div class="col pt-3 pb-3">
-                <h3>Choisissez votre maison</h3>
+                <h3 class="fw-bold">Choisissez votre maison</h3>
             </div>
         </div>
-        <div class="col-12 input-group mb-3 justify-content-evenly bg-body-secondary p-2">
+        <div class="col-12 input-group mb-3 justify-content-evenly bg-secondary p-2">
             <div class="col-12 col-md-2 my-1">
-                <input type="text" id="location" class="form-control" placeholder="Ville, Code Postal, Département" aria-label="Rechercher par localisation">
+                <input type="text" id="location" class="form-control rounded-0" placeholder="Ville, Code Postal, Département" aria-label="Rechercher par localisation">
             </div>
             <div class="col-12 col-md-2 my-1">
-                <input type="text" id="type" class="form-control" placeholder="Tous types" aria-label="Rechercher par type">
+                <input type="text" id="type" class="form-control rounded-0" placeholder="Tous types" aria-label="Rechercher par type">
             </div>
             <div class="col-12 col-md-2 my-1">
-                <input type="number" id="pricemin" class="form-control" placeholder="Prix min" aria-label="Prix minimum">
+                <input type="number" id="pricemin" class="form-control rounded-0" placeholder="€Prix min" aria-label="Prix minimum">
             </div>
             <div class="col-12 col-md-2 my-1">
-                <input type="number" id="pricemax" class="form-control" placeholder="Prix max" aria-label="Prix maximum">
+                <input type="number" id="pricemax" class="form-control rounded-0" placeholder="€Prix max" aria-label="Prix maximum">
             </div>
         </div>
-            <div class="container pt-5">
+            <div class="container pt-3">
                 <div class="card-group">
                     <% for (Annonce annonce : (List<Annonce>) request.getSession().getAttribute("annonceList")) {
                         System.out.println(annonce.getPrix());
@@ -84,7 +84,7 @@
                             <img src="<%= annonce.getSite() %>" class="card-img-top card-picture" alt="Annonce Image">
                             <p class="card-price position-absolute bg-danger p-1 text-center fw-bold"><%= Math.round(annonce.getPrix()) %> €</p>
                             <div class="card-body">
-                                <h5 class="card-title"><%= annonce.getType() %></h5>
+                                <h5 class="card-title fw-bold"><%= annonce.getType() %></h5>
                                 <p class="card-text"><%= annonce.getDescription() %></p>
                                 <p class="card-text"><%= Math.round(annonce.getSurface()) %>m²</p>
                             </div>

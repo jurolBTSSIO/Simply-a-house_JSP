@@ -65,12 +65,8 @@ h2 {
     font-weight: bold;
 }
 
-.accordion-button:not(.collapsed) {
-    color: black;
-}
-
-.accordion-button:focus {
-    border-color: grey;
+.accordion-button {
+    co
 }
 
 .grey {
