@@ -120,6 +120,14 @@ h2 {
     background-color: var(--gris-fond-bandeau1);
 }
 
+#phoneButton {
+    border: 1px solid #000;
+}
+
+#emailButton {
+    border: 1px solid #000;
+}
+
 .swiper {
     width: 100%;
     height: 350px;

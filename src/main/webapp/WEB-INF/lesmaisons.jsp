@@ -21,8 +21,41 @@
 </head>
 
 <body>
-<a class="btn btn-outline-dark position-fixed end-0 p-2 fixed-btn mb-5 bg-light top-50 z-3" href="tel:+33257877185"><i class="bi bi-telephone-fill"></i></a>
-<a class="btn btn-outline-dark position-fixed end-0 p-2 fixed-btn mt-5 bg-light top-50 z-3" href="mailto:contact@simplyahouse.com" target="_blank"><i class="bi bi-envelope"></i></a>
+<!-- Telephone Bouton -->
+<i id="phoneButton" class="bi bi-telephone-fill position-fixed end-0 p-2 mb-5 bg-light top-50 z-3" data-bs-toggle="tooltip" data-bs-placement="left" title="02.98.86.32.26"></i>
+
+<!-- Email Bouton -->
+<i id="emailButton" class="bi bi-envelope position-fixed end-0 p-2 mt-5 bg-light top-50 z-3" data-bs-toggle="modal" data-bs-target="#emailModal"></i>
+
+<!-- Email Modal -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emailModalLabel">Nous conctater</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Email Formumaire -->
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" placeholder="Entrez votre nom">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email </label>
+                        <input type="email" class="form-control" placeholder="Entrez votre email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Entrez votre message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <header id="header">
     <nav class="navbar navbar-expand-md navbar-dark">
         <a href="${pageContext.request.contextPath}/accueil" class="navbar-brand px-3"><img src="<%= ctxPath %>/assets/images-simply/Logo.png" alt="">
