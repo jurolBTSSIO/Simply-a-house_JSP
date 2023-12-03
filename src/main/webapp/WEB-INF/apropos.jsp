@@ -30,7 +30,7 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbar">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav px-3">
                 <li class="nav-item text-center"><a href="${pageContext.request.contextPath}/accueil"
                                                          class="nav-link text-white fs-5">Accueil</a></li>
                 <li class="nav-item text-center active"><a href="${pageContext.request.contextPath}/apropos" class="nav-link text-white fs-5">A&nbsp;Propos</a>
@@ -63,7 +63,7 @@
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button bg-dark-subtle rounded-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button bg-dark-subtle rounded-0 fw-bold text-black" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Nos engagements et garanties
                     </button>
                 </h2>
@@ -87,7 +87,7 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button bg-dark-subtle rounded-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button bg-dark-subtle rounded-0 fw-bold text-black" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
                         Un rapport qualité/prix inégalé
                     </button>
                 </h2>
@@ -99,7 +99,7 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button bg-dark-subtle rounded-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button bg-dark-subtle rounded-0 fw-bold text-black" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
                         Une équipe investie et disponible
                     </button>
                 </h2>

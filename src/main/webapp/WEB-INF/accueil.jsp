@@ -26,16 +26,16 @@
     <div class="banner-contact row d-none d-md-flex justify-content-end">
 
         <div class="col-2 d-flex justify-content-around">
-            <a class="d-flex justify-content-center py-1" href="">
+            <a class="d-flex justify-content-center py-1" href="https://facebook.com">
                 <i class="bi bi-facebook text-black"></i>
             </a>
-            <a class="d-flex justify-content-center py-1" href="">
+            <a class="d-flex justify-content-center py-1" href="https://twitter.com">
                 <i class="bi bi-twitter text-black"></i>
             </a>
-            <a class="d-flex justify-content-center py-1" href="">
+            <a class="d-flex justify-content-center py-1" href="https://linkedin.com">
                 <i class="bi bi-linkedin text-black"></i>
             </a>
-            <a class="d-flex justify-content-center py-1" href="">
+            <a class="d-flex justify-content-center py-1" href="https://instagram.com">
                 <i class="bi bi-instagram text-black"></i>
             </a>
         </div>
@@ -46,7 +46,12 @@
         </div>
         <div class="col-2 d-flex justify-content-center py-1">
             <a class="d-flex justify-content-center text-decoration-none align-items-center" href="">
-                <i class="bi bi-house-door-fill text-black"></i><div class="text-decoration-none text-black">&nbsp;Suivre&nbsp;mon&nbsp;projet</div>
+
+                <button type="button" class="btn btn-outline-dark ext-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#suivreMonProjet">
+                    <i class="bi bi-house-door-fill text-black"></i>
+                    Suivre mon projet
+                </button>
+
             </a>
         </div>
     </div>
@@ -63,7 +68,7 @@
     </div>
         <div class="row">
             <div class="col px-0">
-                <nav class="navbar navbar-expand-md navbar-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark">
                     <a href="<%= ctxPath %>/accueil" class="navbar-brand px-3"><img src="<%= ctxPath %>/assets/images-simply/Logo.png" alt="">
                     </a>
                     <button class="navbar-toggler px-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -71,7 +76,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse justify-content-end" id="navbar">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav px-3">
                             <li class="nav-item text-center active"><a href="<%= ctxPath %>/accueil"
                                                     class="nav-link text-white fs-5">Accueil</a></li>
                             <li class="nav-item text-center"><a href="${pageContext.request.contextPath}/apropos" class="nav-link text-white fs-5">A&nbsp;Propos</a>
@@ -90,18 +95,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h1 class="pb-3">Bienvenue Chez Simply A House</h1>
-                        <p class="fs-5">La société <strong>Simply A House</strong>, groupement d’agences
+                        <h2 class="pb-3">Bienvenue Chez Simply A House</h2>
+                        <p class="fs-6">La société <strong>Simply A House</strong>, groupement d’agences
                             qui vendent des maisons individuelles ou mitoyennes en <strong>France</strong>, est née de
                             l’ambition, accompagner ses clients dans la réussite d’un des projets les plus importants
                             dans
                             leur vie : l’achat <strong>d’une maison</strong>.</p>
-                        <p class="fs-5"><strong>Simply A House</strong> vous accompagne tout au long
+                        <p class="fs-6"><strong>Simply A House</strong> vous accompagne tout au long
                             de votre projet d’acquisition de maison, de la recherche de la réservation jusqu’à la remise
                             des
                             clés.</p>
                     </div>
-                    <div class="col mx-5"><img src="<%= ctxPath %>/assets/images-simply/bienvenue.JPG" width="250px" style="float: right;" alt="photo de bienvenue">
+                    <div class="d-none d-md-block col mx-5"><img src="<%= ctxPath %>/assets/images-simply/bienvenue.JPG" width="250px" style="float: right;" alt="photo de bienvenue">
                     </div>
                 </div>
             </div>
@@ -109,7 +114,8 @@
         <!-- LES ANNONCES -->
         <section class="py-5">
             <div class="container">
-                <h2 class="px-3 pb-5">Les Dernières Annonces</h2>
+                <h3 class="px-3 pb-3
+                 fw-bold">Les Dernières Annonces</h3>
                 <div class="card-group">
                     <%
                         List<Annonce> annonceList = (List<Annonce>) request.getSession().getAttribute("annonceList");

@@ -41,6 +41,8 @@
     --rouge-fonce-color: #6a225a;
     --gris-bloc-maison-color: #e0dfdf;
     --gris-fonce-color: #3e3d4b;
+    --gris-fond-bandeau1: #dcdcdc;
+    --rouge-clair-color: #C60A19;
 }
 
 body {
@@ -52,12 +54,12 @@ body {
 .card {
     box-shadow: 1px 1px 15px rgb(175, 174, 174);
     box-sizing: border-box;
-    background-color: #c2c2c2;
+    background-color: var(--gris-bloc-maison-color);
     font-family: 'myriad_proregular';
 }
 
-nav {
-    background-color: #C60A19;
+.navbar {
+    background-color: var(--rouge-clair-color);
 }
 
 h1,
@@ -66,7 +68,7 @@ h2 {
 }
 
 .accordion-button {
-    co
+
 }
 
 .grey {
@@ -115,7 +117,7 @@ h2 {
 }
 
 .banner-contact {
-    background-color: #d9d9d9;
+    background-color: var(--gris-fond-bandeau1);
 }
 
 .swiper {
@@ -124,13 +126,13 @@ h2 {
 }
 
 .swiper-slide {
-    display: flex; !important;
+    display: flex;
 }
 .swiper-slide  img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover !important;
+    object-fit: cover;
 }
 
 .fixed-btn {

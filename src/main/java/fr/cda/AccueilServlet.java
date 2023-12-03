@@ -10,9 +10,17 @@ import fr.cda.util.DaoFactory;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 
+/**
+ * Classe AccueilServlet
+ * @author Julien Rolland
+ */
 public class AccueilServlet extends HttpServlet {
     private AnnonceDao annonceDao;
     private List<Annonce> annonceList;
+
+    /**
+     * init()
+     */
     public void init() {
         DaoFactory daoFactory = DaoFactory.getInstance();
         try {
@@ -23,15 +31,22 @@ public class AccueilServlet extends HttpServlet {
         }
     }
 
+    /**
+     * doGet()
+     * @param request
+     * @param response
+     * @throws IOException
+     * @throws ServletException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
         session.setAttribute("annonceList", this.annonceList);
-        for (int i = 0; i < annonceList.size(); i++) {
-            System.out.println("annonces: " + annonceList.get(i).getDescription());
-        }
         this.getServletContext().getRequestDispatcher("/WEB-INF/accueil.jsp").forward(request, response);
     }
 
+    /**
+     * destroy()
+     */
     public void destroy() {
     }
 }

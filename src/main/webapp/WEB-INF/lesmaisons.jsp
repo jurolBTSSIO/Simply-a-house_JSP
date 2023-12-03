@@ -32,7 +32,7 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbar">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav px-3">
                 <li class="nav-item text-center"><a href="${pageContext.request.contextPath}/accueil"
                                                     class="nav-link text-white fs-5">Accueil</a></li>
                 <li class="nav-item text-center"><a href="${pageContext.request.contextPath}/apropos" class="nav-link text-white fs-5">A&nbsp;Propos</a>

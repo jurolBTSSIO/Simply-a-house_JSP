@@ -30,7 +30,7 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbar">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav px-3">
                 <li class="nav-item text-center"><a href="${pageContext.request.contextPath}/accueil"
                                                     class="nav-link text-white fs-5">Accueil</a></li>
                 <li class="nav-item text-center"><a href="${pageContext.request.contextPath}/apropos" class="nav-link text-white fs-5">A&nbsp;Propos</a>
@@ -48,7 +48,7 @@
             <h1>Contacter Simply A House</h1>
             <div class="row pt-5">
                 <div class="col">
-                    <p class="fs-5">Pour toute demande d'information ou de prise de rendez-vous, vous pouvez nous adresser votre demande en remplissant le formulaire de contact ci-dessous.
+                    <p class="fs-6">Pour toute demande d'information ou de prise de rendez-vous, vous pouvez nous adresser votre demande en remplissant le formulaire de contact ci-dessous.
 
                         Le conseiller de votre secteur géographique, interlocuteur unique, vous proposera un accompagnement unique et personnalisé tout au long de votre projet.</p>
                 </div>
