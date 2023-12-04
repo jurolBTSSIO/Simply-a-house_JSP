@@ -196,7 +196,7 @@
 
                     <div class="col-xl-4 col-md-6 px-3 pb-5">
                         <div class="card h-100">
-                            <img src="<%= annonceList.get(i).get() %>" class="card-img-top card-picture" alt="Annonce Image">
+                            <img src="<%= annonceList.get(i).getImage() %>" class="card-img-top card-picture" alt="Annonce Image">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold"><%= annonceList.get(i).getType() %></h5>
                                 <p class="card-text"><%= annonceList.get(i).getDescription() %></p>

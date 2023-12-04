@@ -110,16 +110,16 @@
             <div class="container pt-3">
                 <div class="card-group">
                     <% for (Annonce annonce : (List<Annonce>) request.getSession().getAttribute("annonceList")) {
-                        System.out.println(annonce.getPrix());
                     %>
                     <div class="col-xl-4 col-md-6 px-3 pb-5">
                         <div class="card h-100">
-                            <img src="<%= annonce.getSite() %>" class="card-img-top card-picture" alt="Annonce Image">
-                            <p class="card-price position-absolute bg-danger p-1 text-center fw-bold"><%= Math.round(annonce.getPrix()) %> €</p>
+                            <img src="<%= annonce.getImage() %>" class="card-img-top card-picture" alt="Annonce Image">
+                            <p class="card-price position-absolute mt-5 bg-danger p-1 w-50 text-center fw-bold"><%= Math.round(annonce.getPrix()) %> €</p>
                             <div class="card-body">
                                 <h5 class="card-title fw-bold"><%= annonce.getType() %></h5>
                                 <p class="card-text"><%= annonce.getDescription() %></p>
                                 <p class="card-text"><%= Math.round(annonce.getSurface()) %>m²</p>
+                                <a class="btn" href="<%=annonce.getSite()%>">Voir sur le site</a>
                             </div>
                         </div>
                     </div>
