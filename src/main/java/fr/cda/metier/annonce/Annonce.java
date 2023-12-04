@@ -10,6 +10,7 @@ public class Annonce {
     private double prix;
     private String description;
     private double surface;
+    private String image;
     private String site;
     private int id_type;
     private int id_ville;
@@ -20,15 +21,17 @@ public class Annonce {
      * @param prix
      * @param description
      * @param surface
+     * @param image
      * @param site
      * @param id_type
      * @param id_ville
      */
-    public Annonce(String type, double prix, String description, double surface, String site, int id_type, int id_ville) {
+    public Annonce(String type, double prix, String description, double surface, String image, String site, int id_type, int id_ville) {
         this.type = type;
         this.prix = prix;
         this.description = description;
         this.surface = surface;
+        this.image = image;
         this.site = site;
         this.id_type = id_type;
         this.id_ville = id_ville;
@@ -102,6 +105,14 @@ public class Annonce {
 
     public void setSurface(double surface) {
         this.surface = surface;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     /**

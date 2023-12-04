@@ -19,10 +19,14 @@ public class AnnonceDaoImpl implements AnnonceDao {
 
     }
 
+    /**
+     * Methode d'ajout a la base de donnees
+     * @param annonce
+     */
     @Override
     public void add(Annonce annonce) {
         try {
-            String sql = "INSERT INTO annonce (type, prix, description, surface, site) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO annonce (type, prix, description, surface, image, site ,id_type, ) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, annonce.getType());
             statement.setDouble(2, annonce.getPrix());
@@ -39,14 +43,15 @@ public class AnnonceDaoImpl implements AnnonceDao {
     @Override
     public void update(Annonce annonce) {
         try {
-            String sql = "UPDATE annonce SET type = ?, prix = ?, description = ?, surface = ?, site = ? WHERE id = ?";
+            String sql = "UPDATE annonce SET type = ?, prix = ?, description = ?, surface = ?, image = ?, site = ? WHERE id = ?";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, annonce.getType());
             statement.setDouble(2, annonce.getPrix());
             statement.setString(3, annonce.getDescription());
             statement.setDouble(4, annonce.getSurface());
-            statement.setString(5, annonce.getSite());
-            statement.setInt(6, annonce.getId());
+            statement.setString(5, annonce.getImage());
+            statement.setString(6, annonce.getSite());
+            statement.setInt(7, annonce.getId());
             statement.executeUpdate();
             statement.close();
         } catch (SQLException e) {
@@ -73,6 +78,7 @@ public class AnnonceDaoImpl implements AnnonceDao {
                 annonce.setType(resultSet.getString("type"));
                 annonce.setPrix(resultSet.getDouble("prix"));
                 annonce.setDescription(resultSet.getString("description"));
+                annonce.setImage(resultSet.getString("image"));
                 annonce.setSurface(resultSet.getDouble("surface"));
                 annonce.setSite(resultSet.getString("site"));
                 return annonce;
@@ -103,6 +109,7 @@ public class AnnonceDaoImpl implements AnnonceDao {
                 annonce.setType(resultSet.getString("type"));
                 annonce.setPrix(resultSet.getDouble("prix"));
                 annonce.setDescription(resultSet.getString("description"));
+                annonce.setImage(resultSet.getString("image"));
                 annonce.setSurface(resultSet.getDouble("surface"));
                 annonce.setSite(resultSet.getString("site"));
                 annonceList.add(annonce);
