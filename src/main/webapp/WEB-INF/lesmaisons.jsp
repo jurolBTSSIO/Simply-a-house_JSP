@@ -101,31 +101,49 @@
                 <input type="text" id="type" class="form-control rounded-0" placeholder="Tous types" aria-label="Rechercher par type">
             </div>
             <div class="col-12 col-md-2 my-1">
-                <input type="number" id="pricemin" class="form-control rounded-0" placeholder="€Prix min" aria-label="Prix minimum">
+                <input type="number" id="pricemin" class="form-control rounded-0" placeholder="€ Prix min" aria-label="Prix minimum">
             </div>
             <div class="col-12 col-md-2 my-1">
-                <input type="number" id="pricemax" class="form-control rounded-0" placeholder="€Prix max" aria-label="Prix maximum">
+                <input type="number" id="pricemax" class="form-control rounded-0" placeholder="€ Prix max" aria-label="Prix maximum">
             </div>
         </div>
             <div class="container pt-3">
                 <div class="card-group">
-                    <% for (Annonce annonce : (List<Annonce>) request.getSession().getAttribute("annonceList")) {
+                    <% List<Annonce> annonceList = (List<Annonce>) request.getSession().getAttribute("annonceList");
+                        for (int i = 0; i < 9; i++) {
                     %>
                     <div class="col-xl-4 col-md-6 px-3 pb-5">
                         <div class="card h-100">
-                            <img src="<%= annonce.getImage() %>" class="card-img-top card-picture" alt="Annonce Image">
-                            <p class="card-price position-absolute mt-5 bg-danger p-1 w-50 text-center fw-bold"><%= Math.round(annonce.getPrix()) %> €</p>
+                            <img src="<%= annonceList.get(i).getImage() %>" class="card-img-top card-picture" height="200px" alt="Annonce Image">
+                            <p class="card-price position-absolute mt-5 p-1 w-50 text-center text-white fw-bold" id="prix"><%= Math.round(annonceList.get(i).getPrix()) %> €</p>
                             <div class="card-body">
-                                <h5 class="card-title fw-bold"><%= annonce.getType() %></h5>
-                                <p class="card-text"><%= annonce.getDescription() %></p>
-                                <p class="card-text"><%= Math.round(annonce.getSurface()) %>m²</p>
-                                <a class="btn" href="<%=annonce.getSite()%>">Voir sur le site</a>
+                                <h5 class="card-title fw-bold"><%= annonceList.get(i).getType() %></h5>
+                                <p class="card-text"><%= annonceList.get(i).getDescription() %></p>
+                                <p class="card-text"><%= Math.round(annonceList.get(i).getSurface()) %>m²</p>
+                                <a class="btn" href="<%=annonceList.get(i).getSite()%>">Voir sur le site</a>
                             </div>
                         </div>
                     </div>
                     <% } %>
                 </div>
             </div>
+    </div>
+    <div class="row">
+        <div class="col pb-2">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link text-black" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-black" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link text-black" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link text-black" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link text-black" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </main>
 <%@include file="footer.jsp"%>

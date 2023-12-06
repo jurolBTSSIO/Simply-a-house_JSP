@@ -62,6 +62,10 @@ body {
     background-color: var(--rouge-clair-color);
 }
 
+#prix {
+    background-color: var(--rouge-clair-color);
+}
+
 h1,
 h2 {
     font-weight: bold;
@@ -100,6 +104,20 @@ h2 {
     border: none;
     border-bottom: 1px solid black;
     border-radius: 0;
+}
+.bglogofooter>a{
+    z-index: 1000;
+}
+
+.bglogofooter:after{
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -25px;
+    bottom: -25px;
+    left: -25px;
+    background-color: black;
+
 }
 
 .footer-content {
